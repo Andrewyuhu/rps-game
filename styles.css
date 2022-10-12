@@ -33,5 +33,12 @@ button {
     background-color: white;
     border: black 3px solid;
     border-radius:20px;
-    height:40px
+    height:40px;
+}
+
+button:hover {
+    box-shadow: 0 8px 20px 0 rgb(187 235 187), 0px -8px 20px 0px rgb(187 235 187);
+    background-color: black;
+    color:white;
+
 }
