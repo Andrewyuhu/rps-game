@@ -7,11 +7,12 @@
 html,
 body {
     display:flex;
+    font-family: 'Poppins', sans-serif;
     justify-content: center;
     flex-direction: column;
     align-items:center;
     height:100%;
-    gap:15px;
+    gap:20px;
 
 }
 .display {
@@ -23,22 +24,85 @@ body {
 .container {
     display:flex;
     gap:20px;
-  
+    height:150px;
+}
+
+.gameFrame {
+    box-shadow: 0 0px 7px 0 #888888, 0px 0px 0px 0px #888888;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    gap:30px;
+    width:70vw;
+    height:80vh;
+    min-width:600px;
+    background-color: white;
 }
 
 button {
-    width:75px;
+    width:150px;
     color:black;
-    font-weight: bold;
+    font-weight: 500;
     background-color: white;
-    border: black 3px solid;
+    font-size:30px;
+    border-style:none;
     border-radius:20px;
-    height:40px;
+    height:150px;
+    font-family: 'Poppins', sans-serif;
+    
+
+    
 }
+
 
 button:hover {
-    box-shadow: 0 8px 20px 0 rgb(187 235 187), 0px -8px 20px 0px rgb(187 235 187);
-    background-color: black;
-    color:white;
-
+    box-shadow: 0 0px 7px 0 #888888, 0px 0px 0px 0px #888888;
 }
+
+
+
+@keyframes shakeLose {
+    0% { transform: translate(1px, 1px) rotate(0deg); color:red;}
+    10% { transform: translate(-1px, -2px) rotate(-1deg);color:red; }
+    20% { transform: translate(-3px, 0px) rotate(1deg); color:red;}
+    30% { transform: translate(3px, 2px) rotate(0deg); color:red;}
+    40% { transform: translate(1px, -1px) rotate(1deg); color:red;}
+    50% { transform: translate(-1px, 2px) rotate(-1deg);color:red; }
+    60% { transform: translate(-3px, 1px) rotate(0deg); color:red;}
+    70% { transform: translate(3px, 1px) rotate(-1deg); color:red;}
+    80% { transform: translate(-1px, -1px) rotate(1deg); color:red;}
+    90% { transform: translate(1px, 2px) rotate(0deg); color:red;}
+    100% { transform: translate(1px, -2px) rotate(-1deg); color:red;}
+  }
+
+  @keyframes draw {
+    0% {  box-shadow: 0 8px 10px 0  #dae8b5, 0px -8px 10px 0px #dae8b5;color:rgb(223, 223, 73);}
+    10% { box-shadow: 0 8px 10px 0  #dae8b5, 0px -8px 10px 0px #dae8b5;color:rgb(223, 223, 73);;}
+    20% {  box-shadow: 0 8px 10px 0  #dae8b5, 0px -8px 10px 0px #dae8b5;color:rgb(223, 223, 73);;}
+    30% {  box-shadow: 0 8px 10px 0  #dae8b5, 0px -8px 10px 0px #dae8b5;color:rgb(223, 223, 73);;}
+    40% { box-shadow: 0 8px 10px 0  #dae8b5, 0px -8px 10px 0px #dae8b5;color:rgb(223, 223, 73);;}
+    50% { box-shadow: 0 8px 10px 0  #dae8b5, 0px -8px 10px 0px #dae8b5; color:rgb(223, 223, 73);;}
+    60% {  box-shadow: 0 8px 10px 0  #dae8b5, 0px -8px 10px 0px #dae8b5;color:rgb(223, 223, 73);;}
+    70% { box-shadow: 0 8px 10px 0  #dae8b5, 0px -8px 10px 0px #dae8b5;color:rgb(223, 223, 73);;}
+    80% {  box-shadow: 0 8px 10px 0  #dae8b5, 0px -8px 10px 0px #dae8b5;color:rgb(223, 223, 73);;}
+    90% { box-shadow: 0 8px 10px 0  #dae8b5, 0px -8px 10px 0px #dae8b5;color:rgb(223, 223, 73);;}
+    100% {  box-shadow: 0 8px 10px 0  #dae8b5, 0px -8px 10px 0px #dae8b5;color:rgb(223, 223, 73);;}
+  }
+
+  @keyframes win {
+    0% {  box-shadow: 0 8px 10px 0  #9eef7b, 0px -8px 10px 0px #9eef7b; width:152px;height:152px;color:rgb(118, 231, 118);}
+    10% { box-shadow: 0 8px 10px 0  #9eef7b, 0px -8px 10px 0px #9eef7b; width:154px;height:154px;color:rgb(118, 231, 118);}
+    20% {  box-shadow: 0 8px 10px 0  #9eef7b, 0px -8px 10px 0px #9eef7b;width:156px;height:156px;color:rgb(118, 231, 118);}
+    30% {  box-shadow: 0 8px 10px 0  #9eef7b, 0px -8px 10px 0px #9eef7b;width:158px;height:158px;color:rgb(118, 231, 118);}
+    40% { box-shadow: 0 8px 10px 0  #9eef7b, 0px -8px 10px 0px #9eef7b;width:160px;height:160px;color:rgb(118, 231, 118);}
+    50% { box-shadow: 0 8px 10px 0  #9eef7b, 0px -8px 10px 0px #9eef7b; width:160px;height:160px;color:rgb(118, 231, 118);}
+    60% {  box-shadow: 0 8px 10px 0  #9eef7b, 0px -8px 10px 0px #9eef7b;width:160px;height:160px;color:rgb(118, 231, 118);}
+    70% { box-shadow: 0 8px 10px 0  #9eef7b, 0px -8px 10px 0px #9eef7b;width:158px;height:158px;color:rgb(118, 231, 118);}
+    80% {  box-shadow: 0 8px 10px 0  #9eef7b, 0px -8px 10px 0px #9eef7b;width:156px;height:156px;color:rgb(118, 231, 118);}
+    90% { box-shadow: 0 8px 10px 0  #9eef7b, 0px -8px 10px 0px #9eef7b;width:154px;height:154px;color:rgb(118, 231, 118);}
+    100% {  box-shadow: 0 8px 10px 0  #9eef7b, 0px -8px 10px 0px #9eef7b;width:152px;height:152px;color:rgb(118, 231, 118);}
+
+
+  }
