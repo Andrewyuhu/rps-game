@@ -31,8 +31,8 @@ function checkWinner (userChoice, computerChoice) {
         case gameOutcome == "w":
             playerScore++;
             displayScore();
-            resultsDisplay.innerHTML = winnerMessage;
             handConversions[userChoice].setAttribute("style","animation:win 0.75s;");
+            resultsDisplay.innerHTML = winnerMessage;
             break;
         case gameOutcome == "l":
             computerScore++;
@@ -44,7 +44,6 @@ function checkWinner (userChoice, computerChoice) {
             handConversions[userChoice].setAttribute("style","animation:draw 0.75s;")
             resultsDisplay.innerHTML = drawMessage;
     }
-
     if (playerScore == 5){
         resultsDisplay.textContent = ("Player wins!");
         popUp.setAttribute("style","visibility:visible;")
@@ -64,6 +63,39 @@ function popUpMessage (winner) {
     } else {
         popMessage.innerHTML = "Better luck next time, you <span style='color:red;'>lost</span> ."
     }
+}
+
+function suddenDeath () {
+    handConversions[0].setAttribute("style","animation:suddenDeath 1.75s;")
+    handConversions[1].setAttribute("style","animation:suddenDeath 1.75s;")
+    handConversions[2].setAttribute("style","animation:suddenDeath 1.75s;")
+    setTimeout(()=>{
+        handConversions[0].setAttribute("style","background-color:green;")
+        handConversions[1].setAttribute("style","background-color:green;")
+        handConversions[2].setAttribute("style","background-color:green;")
+    },1750);
+    setTimeout(()=>delayedWinnerDisplay,2000);
+}
+
+function delayedWinnerDisplay(){
+    if (playerScore > computerScore){
+        handConversions[0].setAttribute("style","background-color:green;")
+        handConversions[1].setAttribute("style","background-color:green;")
+        handConversions[2].setAttribute("style","background-color:green;")
+        resultsDisplay.textContent = ("Player wins!");
+        popUp.setAttribute("style","visibility:visible;")
+        popUpMessage(1)
+        resetScore();
+    } else {
+        handConversions[0].setAttribute("style","background-color:green;")
+        handConversions[1].setAttribute("style","background-color:green;")
+        handConversions[2].setAttribute("style","background-color:green;")
+        resultsDisplay.textContent = ("Computer wins!");
+        popUp.setAttribute("style","visibility:visible;")
+        popUpMessage(2);
+        resetScore();
+    }
+
 }
 
 

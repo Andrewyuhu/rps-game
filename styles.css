@@ -150,6 +150,30 @@ body {
     80% {  box-shadow: 0 8px 10px 0  #9eef7b, 0px -8px 10px 0px #9eef7b;width:156px;height:156px;color:rgb(118, 231, 118);}
     90% { box-shadow: 0 8px 10px 0  #9eef7b, 0px -8px 10px 0px #9eef7b;width:154px;height:154px;color:rgb(118, 231, 118);}
     100% {  box-shadow: 0 8px 10px 0  #9eef7b, 0px -8px 10px 0px #9eef7b;width:152px;height:152px;color:rgb(118, 231, 118);}
+  }
 
+  @keyframes suddenDeath {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    5% { transform: translate(-1px, -2px) rotate(-1deg); }
+    10% { transform: translate(-3px, 0px) rotate(1deg); }
+    15% { transform: translate(3px, 2px) rotate(0deg); }
+    20% { transform: translate(1px, -1px) rotate(1deg); }
+    25% { transform: translate(-1px, 2px) rotate(-1deg);}
+    30% { transform: translate(-3px, 1px) rotate(0deg); }
+    35% { transform: translate(3px, 1px) rotate(-1deg); }
+    40% { transform: translate(-1px, -1px) rotate(1deg);}
+    45% { transform: translate(1px, 2px) rotate(0deg); }
+    50% { transform: translate(1px, -2px) rotate(-1deg);}
+    55% { transform: translate(1px, 1px) rotate(0deg); }
+    60% { transform: translate(-1px, -2px) rotate(-1deg); }
+    65% { transform: translate(-3px, 0px) rotate(1deg); }
+    70% { transform: translate(3px, 2px) rotate(0deg); }
+    75% { transform: translate(1px, -1px) rotate(1deg); }
+    80% { transform: translate(-1px, 2px) rotate(-1deg);}
+    85% { transform: translate(-3px, 1px) rotate(0deg); }
+    90% { transform: translate(3px, 1px) rotate(-1deg); }
+    95% { transform: translate(-1px, -1px) rotate(1deg);}
+    97.5% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg);}
 
   }
