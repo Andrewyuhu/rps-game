@@ -41,7 +41,7 @@ body {
     background-color: white;
 }
 
-button {
+.container button {
     width:150px;
     color:black;
     font-weight: 500;
@@ -57,24 +57,71 @@ button {
 }
 
 
-button:hover {
+.container button:hover {
     box-shadow: 0 0px 7px 0 #888888, 0px 0px 0px 0px #888888;
 }
 
+.popup {
+    position:absolute;
+    background-color: black;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 25px;
+    width:500px;
+    height:400px;
+    visibility: hidden;
+    box-shadow: 0 0px 7px 0 #888888, 0px 0px 0px 0px #888888;
 
+}
 
+.popMessage{
+    margin-top:auto;
+    margin-bottom:auto;
+    color:white;
+    font-size:25px;
+}
+
+.close {
+    background-color: white;
+    color: black;
+    border-style:none;
+    font-family: "Poppins",sans-serif;
+    margin-bottom: 25px;
+    box-shadow: 0 0px 7px 0 white, 0px 0px 0px 0px white;
+    border-radius:15px;
+    height:45px;
+    width:125px;
+}
+
+.close:hover {
+    background-color: black;
+    color:white;
+}
+
+.round {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color:white;
+    border-radius: 10px;
+    width:200px;
+    height:40px;
+}
 @keyframes shakeLose {
-    0% { transform: translate(1px, 1px) rotate(0deg); color:red;}
-    10% { transform: translate(-1px, -2px) rotate(-1deg);color:red; }
-    20% { transform: translate(-3px, 0px) rotate(1deg); color:red;}
-    30% { transform: translate(3px, 2px) rotate(0deg); color:red;}
-    40% { transform: translate(1px, -1px) rotate(1deg); color:red;}
-    50% { transform: translate(-1px, 2px) rotate(-1deg);color:red; }
-    60% { transform: translate(-3px, 1px) rotate(0deg); color:red;}
-    70% { transform: translate(3px, 1px) rotate(-1deg); color:red;}
-    80% { transform: translate(-1px, -1px) rotate(1deg); color:red;}
-    90% { transform: translate(1px, 2px) rotate(0deg); color:red;}
-    100% { transform: translate(1px, -2px) rotate(-1deg); color:red;}
+    0% { transform: translate(1px, 1px) rotate(0deg); color:red;box-shadow: 0 8px 10px 0  #cc9999, 0px -8px 10px 0px  #cc9999;}
+    10% { transform: translate(-1px, -2px) rotate(-1deg);color:red;box-shadow: 0 8px 10px 0  #cc9999, 0px -8px 10px 0px  #cc9999; }
+    20% { transform: translate(-3px, 0px) rotate(1deg); color:red;box-shadow: 0 8px 10px 0  #cc9999, 0px -8px 10px 0px  #cc9999;}
+    30% { transform: translate(3px, 2px) rotate(0deg); color:red;box-shadow: 0 8px 10px 0  #cc9999, 0px -8px 10px 0px  #cc9999;}
+    40% { transform: translate(1px, -1px) rotate(1deg); color:red;box-shadow: 0 8px 10px 0  #cc9999, 0px -8px 10px 0px  #cc9999;}
+    50% { transform: translate(-1px, 2px) rotate(-1deg);color:red; box-shadow: 0 8px 10px 0  #cc9999, 0px -8px 10px 0px  #cc9999;}
+    60% { transform: translate(-3px, 1px) rotate(0deg); color:red;box-shadow: 0 8px 10px 0  #cc9999, 0px -8px 10px 0px  #cc9999;}
+    70% { transform: translate(3px, 1px) rotate(-1deg); color:red;box-shadow: 0 8px 10px 0  #cc9999, 0px -8px 10px 0px  #cc9999;}
+    80% { transform: translate(-1px, -1px) rotate(1deg); color:red;box-shadow: 0 8px 10px 0  #cc9999, 0px -8px 10px 0px  #cc9999;}
+    90% { transform: translate(1px, 2px) rotate(0deg); color:red;box-shadow: 0 8px 10px 0  #cc9999, 0px -8px 10px 0px  #cc9999;}
+    100% { transform: translate(1px, -2px) rotate(-1deg); color:red;box-shadow: 0 8px 10px 0  #cc9999, 0px -8px 10px 0px  #cc9999;}
   }
 
   @keyframes draw {
